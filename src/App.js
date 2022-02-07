@@ -7,7 +7,6 @@ import React from 'react';
 import ToDo from './to-do/todo';
 import Scrum from './backlog/scrum';
 
-
 function App() {
   return (
     <div className="App">
