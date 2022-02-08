@@ -1,34 +1,41 @@
 .goal {
-    height: 250px;
-    width: 350px;
+    height: 350px;
+    width: 450px;
     background-color: #fff;
     border: solid black 1px;
 }
 
+.add {
+    border-radius: 15px;
+    position: absolute;
+    top: 5px;
+    left: 360px
+}
+
 .red {
-    height: 250px;
-    width: 350px;
+    height: 350px;
+    width: 450px;
     background-color: red;
     border: solid black 1px;
 }
 
 .green {
-    height: 250px;
-    width: 350px;
+    height: 350px;
+    width: 450px;
     background-color: green;
     border: solid black 1px;
 }
 
 .pink {
-    height: 250px;
-    width: 350px;
+    height: 350px;
+    width: 450px;
     background-color: pink;
     border: solid black 1px;
 }
 
 .blue {
-    height: 250px;
-    width: 350px;
+    height: 350px;
+    width: 450px;
     background-color: blue;
     border: solid black 1px;
 }

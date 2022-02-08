@@ -40,7 +40,7 @@ class AddItemForm extends React.Component {
                         <option selected={option === 'blue'}  value='blue'>Важно, но не срочно</option>
                         <option selected={option === 'green'}  value='green'>Не срочно и не важно</option>
                     </select>
-                    <button className="add" onClick={this.addItem}>+</button>
+                    <button className="add" onClick={this.addItem}>✔</button>
                 </div>
             </div>
         )

@@ -17,17 +17,20 @@
 .objectives {
     position: absolute;
     top: 250px;
-    left: 350px;
-}
-
-.todoitem {
-    background-color: red;
+    left: 800px;
 }
 
 .new-goal {
     position: absolute;
-    left: 800px;
+    left: 200px;
     top: -30px;
+}
+
+.hide-tab {
+    position: absolute;
+    top: 255px;
+    left: 1200px;
+    border-radius: 15px;
 }
 
 .my-objective {
@@ -35,7 +38,7 @@
     justify-content: center;
     text-align: center;
     height: 100px;
-    width: 300px;
+    width: 400px;
     font-size: 20px;
     border: none;
     outline: none;

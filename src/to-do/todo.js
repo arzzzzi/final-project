@@ -27,7 +27,7 @@ class ToDo extends React.Component {
                     {show === true && <AddItemForm/>}
                 </div>
                 {show === false && <button className="new-goal" onClick={this.show} >Создать новую задачу</button>}
-                {show === true && <button className="new-goal" onClick={this.hide}>Закрыть</button>}
+                {show === true && <button className="hide-tab" onClick={this.hide}>X</button>}
             </div>
         )
     }
