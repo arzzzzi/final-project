@@ -1,19 +1,13 @@
 import React from "react";
-import ToDoItem from "../todoitem/todoitem"
+import ListItem from "./listitem/listitem";
 
 class ToDoList extends React.Component {
-    state = {
-        list: []
-    }
-
     render() {
-        const {list} = this.props
         return (
-            <div>
-                {list && <ToDoItem />}
-            </div>
+            <ListItem />
         )
     }
 }
 
 export default ToDoList;
+

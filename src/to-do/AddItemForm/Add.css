@@ -1,0 +1,34 @@
+.goal {
+    height: 250px;
+    width: 350px;
+    background-color: #fff;
+    border: solid black 1px;
+}
+
+.red {
+    height: 250px;
+    width: 350px;
+    background-color: red;
+    border: solid black 1px;
+}
+
+.green {
+    height: 250px;
+    width: 350px;
+    background-color: green;
+    border: solid black 1px;
+}
+
+.pink {
+    height: 250px;
+    width: 350px;
+    background-color: pink;
+    border: solid black 1px;
+}
+
+.blue {
+    height: 250px;
+    width: 350px;
+    background-color: blue;
+    border: solid black 1px;
+}

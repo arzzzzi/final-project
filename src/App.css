@@ -1,5 +1,6 @@
 .App {
     text-align: center;
+    position: relative;
 }
 
 .App-logo {
@@ -13,45 +14,33 @@
     }
 }
 
-.goal {
-    height: 250px;
-    width: 350px;
-    background-color: #fff;
+.objectives {
+    position: absolute;
+    top: 250px;
+    left: 350px;
 }
 
-.red {
-    height: 250px;
-    width: 350px;
-    background-color: red
+.todoitem {
+    background-color: red;
 }
 
-.green {
-    height: 250px;
-    width: 350px;
-    background-color: green
+.new-goal {
+    position: absolute;
+    left: 800px;
+    top: -30px;
 }
 
-.pink {
-    height: 250px;
-    width: 350px;
-    background-color: pink
-}
-
-.blue {
-    height: 250px;
-    width: 350px;
-    background-color: blue
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.my-objective {
+    margin: auto;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    box-sizing: border-box;
 }
 
 .App-link {

@@ -10,15 +10,13 @@ import Scrum from './backlog/scrum';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Router>
-          <Routes>
-            <Route path="/todo" exact element={<ToDo />} />
-            <Route path="/scrum" exact element={<Scrum />} />
-            <Route path="/" exact element={<MainPage />} />
-          </Routes>
-        </Router>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/todo" exact element={<ToDo />} />
+          <Route path="/scrum" exact element={<Scrum />} />
+          <Route path="/" exact element={<MainPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
@@ -28,9 +26,9 @@ class MainPage extends React.Component {
     return (
       <div>
         <div className='main-menu'>
-            <div className='todo'><Link to="/todo">TO-DO LIST</Link></div>
-            <div className='scrum'><Link to="/scrum">SCRUM</Link></div>
-          </div>
+          <div className='todo'><Link to="/todo">TO-DO LIST</Link></div>
+          <div className='scrum'><Link to="/scrum">SCRUM</Link></div>
+        </div>
       </div>
     )
   }
