@@ -16,8 +16,8 @@ class ListItem extends React.Component {
             <div className="list">
                 {objectives && objectives.map((item) => {
                     return <div className={`goal ${item.style} `} >
-                        <div className='todoItem' key={item.id} >{item.title} </div>
                         <button className='deleteBtn' onClick={() => this.deleteItem(item.id)}>  X </button>
+                        <div className='todoItem' key={item.id} >{item.title} </div>
                     </div>
                 })}
             </div>
