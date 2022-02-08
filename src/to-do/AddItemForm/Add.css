@@ -1,43 +1,80 @@
 .goal {
-    height: 350px;
-    width: 450px;
+    height: 250px;
+    width: 350px;
     background-color: #fff;
     border: solid black 1px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2)
+}
+
+.goal::before {
+    display: block;
+    content: "";
+    background: rgba(227, 200, 114, 0.40);
+    width: 130px;
+    height: 28px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px/18px 0;
+    position: absolute;
+    top: -13px;
+    left: 80px;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
 }
 
 .add {
     border-radius: 15px;
     position: absolute;
-    top: 5px;
-    left: 360px
+    top: 3px;
+    left: 280px;
 }
 
 .red {
-    height: 350px;
-    width: 450px;
-    background-color: red;
-    border: solid black 1px;
+    height: 250px;
+    width: 350px;
+    background-color: #e73737e7;
+    border: none;
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    transform: rotate(-1deg);
 }
 
 .green {
-    height: 350px;
-    width: 450px;
-    background-color: green;
-    border: solid black 1px;
-    color: #fff;
+    height: 250px;
+    width: 350px;
+    background-color: rgba(68, 194, 68, 0.911);
+    border: none;
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
 }
 
 .pink {
-    height: 350px;
-    width: 450px;
-    background-color: pink;
-    border: solid black 1px;
+    height: 250px;
+    width: 350px;
+    background-color: #f69284;
+    border: none;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
 }
 
 .blue {
-    height: 350px;
-    width: 450px;
-    background-color: blue;
-    border: solid black 1px;
-    color: #fff;
+    height: 250px;
+    width: 350px;
+    background-color: #2d9488;
+    border: none;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
 }

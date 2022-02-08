@@ -17,8 +17,7 @@ class AddItemForm extends React.Component {
             style: option
         })
     }
-
-
+    
     render() {
 
         const { title, option } = this.state

@@ -17,19 +17,27 @@
 .objectives {
     position: absolute;
     top: 250px;
-    left: 800px;
+    left: 500px;
 }
 
 .new-goal {
     position: absolute;
-    left: 200px;
-    top: -30px;
+    left: 150px;
+    top: -50px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64, 199, 129);
+    box-shadow: 0 -3px rgb(53, 167, 110) inset;
+    transition: 0.2s;
 }
 
 .hide-tab {
     position: absolute;
-    top: 255px;
-    left: 1200px;
+    top: 295px;
+    left: 820px;
     border-radius: 15px;
 }
 
@@ -38,7 +46,7 @@
     justify-content: center;
     text-align: center;
     height: 100px;
-    width: 400px;
+    width: 300px;
     font-size: 20px;
     border: none;
     outline: none;

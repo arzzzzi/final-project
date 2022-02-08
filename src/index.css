@@ -9,6 +9,10 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 } */
 
+body {
+    background: url(https://phonoteka.org/uploads/posts/2021-05/1620897094_23-phonoteka_org-p-probkovaya-doska-fon-dlya-prezentatsii-32.jpg);
+}
+
 .main-menu {
     display: flex;
     flex-direction: column;
