@@ -2,6 +2,7 @@ import React from "react";
 import { deleteItem } from "../../../redux/actions";
 import { connect } from "react-redux";
 import './todolist.css'
+import {DeleteOutlined} from '@ant-design/icons';
 
 class ListItem extends React.Component {
     state = {
@@ -16,7 +17,7 @@ class ListItem extends React.Component {
             <div className="list">
                 {objectives && objectives.map((item) => {
                     return <div className={`goal ${item.style} `} >
-                        <button className='deleteBtn' onClick={() => this.deleteItem(item.id)}>  X </button>
+                        <div className='deleteBtn' onClick={() => this.deleteItem(item.id)}> <DeleteOutlined /></div>
                         <div className='todoItem' key={item.id} >{item.title} </div>
                     </div>
                 })}
@@ -24,6 +25,7 @@ class ListItem extends React.Component {
         )
     }
 }
+
 const mapDispatchToProps = dispatch => ({
     deleteItem: id => dispatch(deleteItem(id))
 })
@@ -35,4 +37,4 @@ const mapStateToProps = (state) => {
 }
 const functionFromConnect = connect(mapStateToProps, mapDispatchToProps);
 
-export default functionFromConnect(ListItem)
+export default functionFromConnect(ListItem);

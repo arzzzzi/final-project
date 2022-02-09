@@ -1,7 +1,9 @@
 import React from "react";
 import { addItem } from "../../redux/actions";
 import { connect } from 'react-redux';
-import './Add.css'
+import './Add.css';
+import {CheckOutlined} from '@ant-design/icons';
+import {CloseOutlined } from '@ant-design/icons';
 
 
 class AddItemForm extends React.Component {
@@ -17,7 +19,9 @@ class AddItemForm extends React.Component {
             style: option
         })
     }
-    
+    onClick = () => {
+        this.props.hide()
+    }
     render() {
 
         const { title, option } = this.state
@@ -39,7 +43,8 @@ class AddItemForm extends React.Component {
                         <option selected={option === 'blue'}  value='blue'>Важно, но не срочно</option>
                         <option selected={option === 'green'}  value='green'>Не срочно и не важно</option>
                     </select>
-                    <button className="add" onClick={this.addItem}>✔</button>
+                    <div className="add" onClick={this.addItem}><CheckOutlined /></div>
+                    <div className="hide-tab" onClick={this.onClick}><CloseOutlined /></div>
                 </div>
             </div>
         )

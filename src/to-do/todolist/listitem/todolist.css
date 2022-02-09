@@ -3,13 +3,14 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .goal {
     margin-bottom: 20px;
     position: relative;
     margin-top: 40px;
+    margin-right: 20px;
 }
 
 .todoItem {
@@ -23,7 +24,7 @@
     border-radius: 15px;
     position: absolute;
     top: 10px;
-    left: 300px;
+    left: 320px;
 }
 
 .goal:hover .deleteBtn {
