@@ -1,7 +1,7 @@
 import React from "react";
 import { deleteItem } from "../../../redux/actions";
 import { connect } from "react-redux";
-import './todolist.css'
+import '../todolist.css'
 import {DeleteOutlined} from '@ant-design/icons';
 
 class ListItem extends React.Component {
@@ -12,13 +12,13 @@ class ListItem extends React.Component {
         this.props.deleteItem(id)
     }
     render() {
-        const {objectives} = this.props
+        const {list} = this.props
         return (
             <div className="list">
-                {objectives && objectives.map((item) => {
-                    return <div className={`goal ${item.style} `} >
+                {list && list.map((item) => {
+                    return <div className={`goal ${item.style} `}  key={item.id}>
                         <div className='deleteBtn' onClick={() => this.deleteItem(item.id)}> <DeleteOutlined /></div>
-                        <div className='todoItem' key={item.id} >{item.title} </div>
+                        <div className='todoItem' >{item.title} </div>
                     </div>
                 })}
             </div>
@@ -32,7 +32,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (state) => {
     return {
-        objectives: state.list
+        list: state.list
     }
 }
 const functionFromConnect = connect(mapStateToProps, mapDispatchToProps);

@@ -18,7 +18,6 @@ function reducer(state = initialState, action) {
             return {...state, list: newList, idCount: idCount + 1 }
         case DELETE_ITEM:
             const { id } = action.payload
-            console.log(id)
             const newArr = list.filter(l => l.id !== id)
             return {...state, list: newArr }
         default:
