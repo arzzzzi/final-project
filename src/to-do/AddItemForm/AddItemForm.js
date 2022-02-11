@@ -36,12 +36,13 @@ class AddItemForm extends React.Component {
                     <select
                         name="sel"
                         className="theme"
+                        value={option.value}
                         onChange={(e) => this.setState({ option: e.target.value })}
                     >
-                        <option selected={option === 'red'} value='red'>Срочно и важно</option>
-                        <option selected={option === 'pink'}  value='pink'>Срочно, но не важно</option>
-                        <option selected={option === 'blue'}  value='blue'>Важно, но не срочно</option>
-                        <option selected={option === 'green'}  value='green'>Не срочно и не важно</option>
+                        <option  value='red'>Срочно и важно</option>
+                        <option  value='pink'>Срочно, но не важно</option>
+                        <option value='blue'>Важно, но не срочно</option>
+                        <option value='green'>Не срочно и не важно</option>
                     </select>
                     <div className="add" onClick={this.addItem}><CheckOutlined /></div>
                     <div className="hide-tab" onClick={this.onClick}><CloseOutlined /></div>
