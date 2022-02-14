@@ -14,10 +14,12 @@ class ToDoList extends React.Component {
    }
    componentDidMount() {
        loadDesks()
-       .then(data => this.setState({
+       .then(data => {
+           console.log(data)
+           this.setState({
            options: data,
            activeDesk: data[0].id
-       }))
+       })})
    }
    saveList = () => {
         const { title, activeDesk } = this.state
@@ -35,15 +37,19 @@ class ToDoList extends React.Component {
        this.setState({
            activeDesk: e.target.value
        })
-        console.log(e.target.value)
    }
 
    loadTasks = (activeDesk) => {
     loadTasksByDeskId(activeDesk)
-    .then(data => console.log(data))
+    .then(data =>
+        this.setState({
+            activeDesk: data.desk,
+            list: data.list
+        }))
    }
     render() {
-        const {title, options, activeDesk} = this.state
+        const {title, options, list, activeDesk} = this.state
+        console.log(list)
         return (
             <div className="list">
                 <select onChange={(e) => this.changeActiveOption(e)}>
@@ -56,7 +62,7 @@ class ToDoList extends React.Component {
                     defaultValue={title}
                     onBlur={(e) => this.setState({ title: e.target.value })}
                 />
-                <ListItem />
+                <ListItem list={list} />
                 <button className="savelist" onClick={this.saveList}>Save</button>
             </div>
         )

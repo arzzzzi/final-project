@@ -5,14 +5,13 @@ import '../todolist.css'
 import {DeleteOutlined} from '@ant-design/icons';
 
 class ListItem extends React.Component {
-    state = {
-        list: []
-    }
+    
     deleteItem = (id) => {
         this.props.deleteItem(id)
     }
     render() {
         const {list} = this.props
+        console.log(this.props)
         return (
             <div className="list">
                 {list && list.map((item) => {
@@ -30,11 +29,11 @@ const mapDispatchToProps = dispatch => ({
     deleteItem: id => dispatch(deleteItem(id))
 })
 
-const mapStateToProps = (state) => {
-    return {
-        list: state.list
-    }
-}
-const functionFromConnect = connect(mapStateToProps, mapDispatchToProps);
+// const mapStateToProps = (state) => {
+//     return {
+//         list: state.list
+//     }
+// }
+const functionFromConnect = connect(null, mapDispatchToProps);
 
 export default functionFromConnect(ListItem);
