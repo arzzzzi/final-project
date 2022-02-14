@@ -3,6 +3,7 @@ import ListItem from "./listitem/listitem";
 import {savelist, loadDesks, loadTasksByDeskId} from '../api';
 import { connect } from "react-redux";
 import './todolist.css'
+import {setList} from '../../redux/actions'
 
 class ToDoList extends React.Component {
    state = {
@@ -38,43 +39,41 @@ class ToDoList extends React.Component {
            activeDesk: e.target.value
        })
    }
-
-   loadTasks = (activeDesk) => {
+   setList = (activeDesk) => {
     loadTasksByDeskId(activeDesk)
     .then(data =>
-        this.setState({
-            activeDesk: data.desk,
-            list: data.list
-        }))
+        this.props.setList(data.list))
    }
     render() {
         const {title, options, list, activeDesk} = this.state
         console.log(list)
         return (
             <div className="list">
-                <select onChange={(e) => this.changeActiveOption(e)}>
+                <select className="options" onChange={(e) => this.changeActiveOption(e)}>
                     {options.map(item => {
                        return <option value={item.id} key={item.id}>{item.title}</option>
                     })}
                 </select>
-                <button onClick={() => this.loadTasks(activeDesk)}>Выбрать</button>
+                <button className="choose" onClick={() => this.setList(activeDesk)}>Выбрать</button>
                 <input className="desk-title"  
                     defaultValue={title}
                     onBlur={(e) => this.setState({ title: e.target.value })}
                 />
                 <ListItem list={list} />
-                <button className="savelist" onClick={this.saveList}>Save</button>
+                <button className="savelist" onClick={this.saveList}>Сохранить</button>
             </div>
         )
     }
 }
-
+const mapDispatchToProps = dispatch => ({
+    setList: list => dispatch(setList(list))
+})
 
 const mapStateToProps = (state) => {
     return {
         list: state.list
     }
 }
-const functionFromConnect = connect(mapStateToProps);
+const functionFromConnect = connect(mapStateToProps, mapDispatchToProps);
 
 export default functionFromConnect(ToDoList)

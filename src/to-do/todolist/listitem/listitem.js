@@ -5,7 +5,6 @@ import '../todolist.css'
 import {DeleteOutlined} from '@ant-design/icons';
 
 class ListItem extends React.Component {
-    
     deleteItem = (id) => {
         this.props.deleteItem(id)
     }
@@ -29,11 +28,11 @@ const mapDispatchToProps = dispatch => ({
     deleteItem: id => dispatch(deleteItem(id))
 })
 
-// const mapStateToProps = (state) => {
-//     return {
-//         list: state.list
-//     }
-// }
-const functionFromConnect = connect(null, mapDispatchToProps);
+const mapStateToProps = (state) => {
+    return {
+        list: state.list
+    }
+}
+const functionFromConnect = connect(mapStateToProps, mapDispatchToProps);
 
 export default functionFromConnect(ListItem);

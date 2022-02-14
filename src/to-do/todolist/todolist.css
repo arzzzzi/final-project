@@ -10,10 +10,18 @@
     position: relative;
 }
 
+.options {
+    position: absolute;
+    top: -50px;
+    left: 1040px;
+    border-radius: 10px;
+    height: 43px;
+}
+
 .savelist {
     position: absolute;
     top: -50px;
-    left: 1000px;
+    left: 870px;
     font-weight: 700;
     color: white;
     text-decoration: none;
@@ -27,8 +35,51 @@
 .desk-title {
     position: absolute;
     top: -50px;
-    left: 830px;
+    left: 700px;
     height: 37px;
+}
+
+.choose {
+    position: absolute;
+    top: -50px;
+    left: 1100px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 13px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    height: 41px;
+}
+
+.choose:hover,
+.choose:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
 .goal {
