@@ -1,6 +1,19 @@
 const host = 'http://localhost:3001'
 
+const updateList = async(list, desk) => {
+    const json = JSON.stringify({ list, desk })
+    console.log(json)
 
+    const res = await fetch(`${host}/api/v1/tasks/${desk}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: json
+    });
+    const data = await res.json()
+    return data;
+}
 
 const savelist = async(list, title, deskId) => {
     const json = JSON.stringify({ list, title, deskId })
@@ -22,11 +35,22 @@ const loadDesks = async() => {
     return data;
 }
 
-const loadTasksByDeskId = async(deskId) => {
-    const res = await fetch(`${host}/api/v1/tasks/${deskId}`)
+const loadTasksByDeskId = async(desk) => {
+    const res = await fetch(`${host}/api/v1/tasks/${desk}`)
+    const data = await res.json()
+    return data
+}
+const addItem = async(title, style, desk = 1) => {
+    console.log(desk)
+    const res = await fetch(`${host}/api/v1/tasks`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ title, style, desk })
+    })
     const data = await res.json()
     return data
 }
 
-
-export { savelist, loadDesks, loadTasksByDeskId }
+export { updateList, savelist, loadDesks, loadTasksByDeskId, addItem }
