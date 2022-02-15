@@ -40,7 +40,7 @@ class AddItemForm extends React.Component {
                         onChange={(e) => this.setState({ option: e.target.value })}
                         defaultValue='Выберите приоритет'
                     >
-                        <option value='' disabled hidden >Выберите приоритет</option>
+                        <option value=''  hidden >Выберите приоритет</option>
                         <option  value='red'>Срочно и важно</option>
                         <option  value='pink'>Срочно, но не важно</option>
                         <option value='blue'>Важно, но не срочно</option>

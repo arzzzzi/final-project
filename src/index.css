@@ -16,18 +16,24 @@ body {
 .main-menu {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 .todo {
-    height: 50px;
-    width: 150px;
-    background-color: aqua;
+    height: 100px;
+    width: 300px;
+    background-color: black;
     border-radius: 15px;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 40px;
 }
 
 .scrum {
-    height: 50px;
-    width: 150px;
+    height: 100px;
+    width: 300px;
+    background-color: black;
     border-radius: 15px;
-    background-color: aqua;
+    color: white;
+    font-size: 30px;
 }
