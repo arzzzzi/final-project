@@ -1,7 +1,7 @@
 import { ADD_ITEM, DELETE_ITEM, SET_LIST } from "./actions";
 
 const initialState = {
-    idCount: 0,
+    idCount: 1,
     list: [],
 }
 
