@@ -34,6 +34,57 @@
     transition: 0.2s;
 }
 
+.new-desk {
+    position: absolute;
+    left: 350px;
+    top: -50px;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    height: 43px;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding: 13px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.new-desk:hover,
+.new-desk:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
 .hide-tab {
     position: absolute;
     top: 3px;
@@ -45,13 +96,13 @@
     position: static;
     right: 0;
     bottom: 0;
-    display: flex;
+    display: block;
     color: #fff;
 }
 
 img {
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
     border: solid black 1px;
 }

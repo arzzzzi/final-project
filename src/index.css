@@ -22,9 +22,9 @@ body {
 .todo {
     height: 100px;
     width: 300px;
-    background-color: black;
+    background-color: white;
     border-radius: 15px;
-    color: white;
+    color: black;
     font-size: 30px;
     margin-bottom: 40px;
 }
@@ -32,8 +32,9 @@ body {
 .scrum {
     height: 100px;
     width: 300px;
-    background-color: black;
+    background-color: white;
     border-radius: 15px;
-    color: white;
+    color: black;
     font-size: 30px;
+    margin-bottom: 40px;
 }

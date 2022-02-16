@@ -3,7 +3,7 @@ import ListItem from "./listitem/listitem";
 import { savelist, loadDesks, loadTasksByDeskId, updateList } from '../api';
 import { connect } from "react-redux";
 import './todolist.css'
-import { setList } from '../../redux/actions'
+import { setList } from '../../redux/actions';
 
 class ToDoList extends React.Component {
     state = {
@@ -31,18 +31,20 @@ class ToDoList extends React.Component {
             title,
             desk: activeDesk
         })
-        if (title === '') {
-
-            updateList(list, activeDesk)
-                .then(data => {
-                    this.props.setList(data.list)
-                })
-        } else {
+        if (title) {
             savelist(list, title, activeDesk)
                 .then(data => {
                     console.log(data)
                 })
         }
+    }
+    updateList = () => {
+        const {activeDesk} = this.state;
+        const {list} = this.props
+        updateList(list, activeDesk)
+                .then(data => {
+                    this.props.setList(data.list)
+                })
     }
     changeActiveOption = (e) => {
         this.setState({
@@ -73,6 +75,7 @@ class ToDoList extends React.Component {
                 />
                 <ListItem list={list} />
                 <button className="savelist" onClick={this.saveList}>Сохранить</button>
+                <button className="updatelist" onClick={this.updateList}>Обновить доску</button>
             </div>
         )
     }

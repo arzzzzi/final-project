@@ -11,7 +11,9 @@ class ToDo extends React.Component {
     state = {
         show: true
     }
-    
+    refreshPage = () => {
+        window.parent.location = window.parent.location.href
+    }
     componentDidMount() {
         const { objectives } = this.props;
         this.setState({ objectives });
@@ -31,6 +33,7 @@ class ToDo extends React.Component {
                 <div className="objectives">
                     {show === true && <AddItemForm hide={this.hide} />}
                 </div>
+                <button className="new-desk" onClick={this.refreshPage}>Создать новую доску</button>
                 {show === false && <button className="new-goal" onClick={this.show} >Создать новую задачу</button>}
             </div>
             <div className="legend">
