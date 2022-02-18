@@ -36,6 +36,8 @@ class ToDoList extends React.Component {
                 .then(data => {
                     console.log(data)
                 })
+        } else {
+            alert('Введите название доски')
         }
     }
     updateList = () => {

@@ -18,7 +18,9 @@ class AddItemForm extends React.Component {
         this.props.addItem({
             title,
             style: option
-        })}
+        })} else {
+            alert('Введите задание и приоритет')
+        }
     }
     onClick = () => {
         this.props.hide()
