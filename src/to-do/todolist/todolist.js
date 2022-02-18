@@ -4,6 +4,8 @@ import { savelist, loadDesks, loadTasksByDeskId, updateList } from '../api';
 import { connect } from "react-redux";
 import './todolist.css'
 import { setList } from '../../redux/actions';
+import Swal from 'sweetalert2'
+
 
 class ToDoList extends React.Component {
     state = {
@@ -35,9 +37,20 @@ class ToDoList extends React.Component {
             savelist(list, title, activeDesk)
                 .then(data => {
                     console.log(data)
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Ваша доска сохранена',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
                 })
         } else {
-            alert('Введите название доски')
+            Swal.fire({
+                icon: 'error',
+                title: 'Что-то пошло не так...',
+                text: 'Введите название доски!'
+              })
         }
     }
     updateList = () => {
@@ -47,6 +60,23 @@ class ToDoList extends React.Component {
                 .then(data => {
                     this.props.setList(data.list)
                 })
+                Swal.fire({
+                    title: 'Вы уверены?',
+                    text: "Вы не сможете отменить это действие!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Да, обновить доску!'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      Swal.fire(
+                        'Перезаписано!',
+                        'Ваша доска была обновлена.',
+                        'success'
+                      )
+                    }
+                  })
     }
     changeActiveOption = (e) => {
         this.setState({

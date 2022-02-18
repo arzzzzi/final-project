@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import './Add.css';
 import {CheckOutlined} from '@ant-design/icons';
 import {CloseOutlined } from '@ant-design/icons';
+import Swal from 'sweetalert2'
 
 
 class AddItemForm extends React.Component {
@@ -19,7 +20,11 @@ class AddItemForm extends React.Component {
             title,
             style: option
         })} else {
-            alert('Введите задание и приоритет')
+            Swal.fire({
+                icon: 'error',
+                title: 'Что-то пошло не так...',
+                text: 'Введите название и приоритет!',
+              })
         }
     }
     onClick = () => {
